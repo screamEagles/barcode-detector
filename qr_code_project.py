@@ -2,12 +2,14 @@ import cv2
 import numpy as np
 from pyzbar.pyzbar import decode
 
+
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)
 cap.set(4, 480)
 
 with open("data_file.txt") as f:
     data_list = f.read().splitlines()
+
 
 while True:
     success, img = cap.read()
